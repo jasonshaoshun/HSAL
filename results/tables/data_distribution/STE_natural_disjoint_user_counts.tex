@@ -1,0 +1,38 @@
+\begin{table*}[th!]
+\centering
+\resizebox{0.8\textwidth}{!}{
+\begin{tabular}{llccccc}
+\toprule
+Dataset & Split & Reputation & Gender & Location & Engagement & Name \\\n
+\midrule
+\multirow{3}{*}{\logoso StackOverflow} & Train & 69976 / 69976 & 2894 / 2894 & 45088 / 16428 / 16767 / 35975 / 13877 & 104839 / 104839 & 17087 / 52472 / 27583 / 8349 / 34461 \\
+& Validation & 10017 / 10017 & 716 / 716 & 7456 / 1876 / 2168 / 4969 / 1786 & 15059 / 15059 & 2501 / 7799 / 3861 / 1110 / 4763 \\
+& Test & 19967 / 19967 & 854 / 854 & 12027 / 4934 / 4001 / 9896 / 3994 & 29933 / 29933 & 4986 / 15058 / 7900 / 2298 / 9692 \\
+
+\addlinespace[3pt]
+\midrule
+
+\multirow{3}{*}{\logoms Mathematics} & Train & 33273 / 33273 & 3616 / 3616 & 34836 / 7755 / 8060 / 12447 / 14074 & 32913 / 32913 & 5949 / 4021 / 15362 / 26265 / 14949 \\
+& Validation & 4770 / 4770 & 1112 / 1112 & 5345 / 942 / 1563 / 1544 / 1727 & 4619 / 4619 & 797 / 715 / 2250 / 3694 / 2084 \\
+& Test & 9452 / 9452 & 1140 / 1140 & 11788 / 2692 / 2082 / 3762 / 3963 & 9361 / 9361 & 1457 / 1193 / 4204 / 7784 / 4266 \\
+
+\addlinespace[3pt]
+\midrule
+
+\multirow{3}{*}{\logosu SuperUser} & Train & 9601 / 9601 & 456 / 456 & 9617 / 5257 / 2354 / 2587 / 2044 & 9251 / 9251 & 2213 / 2052 / 4652 / 3486 / 6799 \\
+& Validation & 1379 / 1379 & 194 / 194 & 1121 / 1100 / 377 / 305 / 313 & 1335 / 1335 & 279 / 282 / 644 / 501 / 1052 \\
+& Test & 2746 / 2746 & 188 / 188 & 1998 / 1856 / 1258 / 851 / 566 & 2640 / 2640 & 581 / 514 / 1409 / 1009 / 1979 \\
+
+\addlinespace[3pt]
+\midrule
+
+\multirow{3}{*}{\logoes English} & Train & 2882 / 2882 & 616 / 616 & 4425 / 4770 / 1276 / 736 / 308 & 2838 / 2838 & 1798 / 579 / 682 / 1474 / 1231 \\
+& Validation & 415 / 415 & 278 / 278 & 490 / 766 / 90 / 59 / 6 & 406 / 406 & 257 / 80 / 97 / 237 / 159 \\
+& Test & 812 / 812 & 266 / 266 & 1671 / 1107 / 329 / 118 / 161 & 806 / 806 & 407 / 230 / 230 / 459 / 298 \\
+
+\bottomrule
+\end{tabular}
+}
+\caption{\textbf{Number of users in each split by protected-attribute class under the natural disjoint split.} For binary attributes, entries are reported as class counts in the form $Z=0$ / $Z=1$. For location, entries are reported as counts for each country class.}
+\label{tab:user-counts-natural-disjoint}
+\end{table*}

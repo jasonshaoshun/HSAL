@@ -1,0 +1,134 @@
+[
+    {
+        "experiment_id": "e-STE_d-SAL_m-MistralModel_c-Mistral-7B-v0.3_i-name",
+        "experiment": "STE",
+        "debiasing": "SAL",
+        "model": "MistralModel",
+        "main_task_accuracy_before": 0.6422979263647906,
+        "main_task_accuracy_after": 0.6329348286077021,
+        "tpr_gap_before": 0.04427760348277534,
+        "tpr_gap_after": 0.025677282513758334,
+        "weighted_tpr_gap_before": 0.04104008870319399,
+        "weighted_tpr_gap_after": 0.023929754172992975,
+        "bias_prediction_accuracy_before": 0.25476089716462125,
+        "bias_prediction_accuracy_after": 0.2507405840033855,
+        "bias_type": "name",
+        "num_eigenvectors_removed": 1,
+        "tpr_stats_before": {
+            "per_class_tprs": {
+                "0": {
+                    "0": {
+                        "support": 1949,
+                        "tpr": 0.8055413032324269
+                    },
+                    "1": {
+                        "support": 2521,
+                        "tpr": 0.8052360174533915
+                    },
+                    "2": {
+                        "support": 3314,
+                        "tpr": 0.7957151478575739
+                    },
+                    "3": {
+                        "support": 1981,
+                        "tpr": 0.8364462392730944
+                    },
+                    "4": {
+                        "support": 1975,
+                        "tpr": 0.8207594936708861
+                    }
+                },
+                "1": {
+                    "0": {
+                        "support": 1103,
+                        "tpr": 0.3318223028105168
+                    },
+                    "1": {
+                        "support": 1527,
+                        "tpr": 0.3621480026195154
+                    },
+                    "2": {
+                        "support": 2421,
+                        "tpr": 0.40850888062783974
+                    },
+                    "3": {
+                        "support": 1002,
+                        "tpr": 0.3393213572854291
+                    },
+                    "4": {
+                        "support": 1111,
+                        "tpr": 0.34113411341134114
+                    }
+                }
+            },
+            "per_class_gap": {
+                "0": 0.028625508040856104,
+                "1": 0.05569194402926369
+            },
+            "per_class_support": {
+                "0": 11740,
+                "1": 7164
+            },
+            "tpr_gap_rms": 0.04427760348277534,
+            "weighted_tpr_gap_rms": 0.04104008870319399
+        },
+        "tpr_stats_after": {
+            "per_class_tprs": {
+                "0": {
+                    "0": {
+                        "support": 1949,
+                        "tpr": 0.8116983068240123
+                    },
+                    "1": {
+                        "support": 2521,
+                        "tpr": 0.8107893692978977
+                    },
+                    "2": {
+                        "support": 3314,
+                        "tpr": 0.8207604103802052
+                    },
+                    "3": {
+                        "support": 1981,
+                        "tpr": 0.8349318525996972
+                    },
+                    "4": {
+                        "support": 1975,
+                        "tpr": 0.819746835443038
+                    }
+                },
+                "1": {
+                    "0": {
+                        "support": 1103,
+                        "tpr": 0.2991840435176791
+                    },
+                    "1": {
+                        "support": 1527,
+                        "tpr": 0.32678454485920105
+                    },
+                    "2": {
+                        "support": 2421,
+                        "tpr": 0.3465510119785213
+                    },
+                    "3": {
+                        "support": 1002,
+                        "tpr": 0.32934131736526945
+                    },
+                    "4": {
+                        "support": 1111,
+                        "tpr": 0.3132313231323132
+                    }
+                }
+            },
+            "per_class_gap": {
+                "0": 0.01735503876249159,
+                "1": 0.031897465481369104
+            },
+            "per_class_support": {
+                "0": 11740,
+                "1": 7164
+            },
+            "tpr_gap_rms": 0.025677282513758334,
+            "weighted_tpr_gap_rms": 0.023929754172992975
+        }
+    }
+]

@@ -1,0 +1,622 @@
+{
+  "experiment_id": "STE-BertModel-bert-base-uncased-predict_z_from_x_logreg_existing_split_unique_users-reputation",
+  "experiment": "STE",
+  "dataset": "mathematics",
+  "model": "BertModel",
+  "model_name_or_path": "bert-base-uncased",
+  "bias_type": "reputation",
+  "npz_path": "data/STE/mathematics/reputation/bert-base-uncased/natural_disjoint.npz",
+  "feature_keys": {
+    "train": "x_train_aboutme_cls",
+    "val": "x_val_aboutme_cls",
+    "test": "x_test_aboutme_cls"
+  },
+  "user_id_keys": {
+    "train": "x_train_userid",
+    "val": "x_val_userid",
+    "test": "x_test_userid"
+  },
+  "label_keys": {
+    "train": "y_train_reputation",
+    "val": "y_val_reputation",
+    "test": "y_test_reputation"
+  },
+  "deduplication": {
+    "strategy": "keep_first_by_userid_within_each_existing_split",
+    "raw_n_train": 66546,
+    "raw_n_val": 9540,
+    "raw_n_test": 18904,
+    "unique_user_n_train": 16095,
+    "unique_user_n_val": 2286,
+    "unique_user_n_test": 4559,
+    "removed_duplicate_rows_train": 50451,
+    "removed_duplicate_rows_val": 7254,
+    "removed_duplicate_rows_test": 14345,
+    "kept_indices_preview": {
+      "train": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "val": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "test": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    }
+  },
+  "label_construction": {
+    "bias_type": "reputation",
+    "dataset": "mathematics",
+    "note": "labels are taken directly from the existing train/val/test arrays in the NPZ file; no thresholding is applied"
+  },
+  "split_sizes": {
+    "n_train": 16095,
+    "n_val": 2286,
+    "n_test": 4559
+  },
+  "label_distributions": {
+    "train_raw": {
+      "0": 33273,
+      "1": 33273
+    },
+    "val_raw": {
+      "0": 4770,
+      "1": 4770
+    },
+    "test_raw": {
+      "0": 9452,
+      "1": 9452
+    },
+    "train": {
+      "0": 11678,
+      "1": 4417
+    },
+    "val": {
+      "0": 1652,
+      "1": 634
+    },
+    "test": {
+      "0": 3304,
+      "1": 1255
+    }
+  },
+  "user_id_overlap": {
+    "train_val": 0,
+    "train_test": 0,
+    "val_test": 0
+  },
+  "selection_metric": "maximize_validation_accuracy",
+  "best_result": {
+    "classifier": "logistic_regression",
+    "params": {
+      "C": 0.01
+    },
+    "train_accuracy": 0.7491767629698665,
+    "val_accuracy": 0.7252843394575678,
+    "test_accuracy": 0.731300723842948,
+    "train_prediction_summary": {
+      "accuracy": 0.7491767629698665,
+      "predicted_label_counts": {
+        "0": 14649,
+        "1": 1446
+      },
+      "confusion_matrix": {
+        "labels": [
+          0,
+          1
+        ],
+        "matrix": [
+          [
+            11145,
+            533
+          ],
+          [
+            3504,
+            913
+          ]
+        ],
+        "rows": "true",
+        "cols": "pred"
+      }
+    },
+    "val_prediction_summary": {
+      "accuracy": 0.7252843394575678,
+      "predicted_label_counts": {
+        "0": 2068,
+        "1": 218
+      },
+      "confusion_matrix": {
+        "labels": [
+          0,
+          1
+        ],
+        "matrix": [
+          [
+            1546,
+            106
+          ],
+          [
+            522,
+            112
+          ]
+        ],
+        "rows": "true",
+        "cols": "pred"
+      }
+    },
+    "test_prediction_summary": {
+      "accuracy": 0.731300723842948,
+      "predicted_label_counts": {
+        "0": 4145,
+        "1": 414
+      },
+      "confusion_matrix": {
+        "labels": [
+          0,
+          1
+        ],
+        "matrix": [
+          [
+            3112,
+            192
+          ],
+          [
+            1033,
+            222
+          ]
+        ],
+        "rows": "true",
+        "cols": "pred"
+      }
+    }
+  },
+  "all_validation_runs": [
+    {
+      "classifier": "logistic_regression",
+      "params": {
+        "C": 0.01
+      },
+      "train_accuracy": 0.7491767629698665,
+      "val_accuracy": 0.7252843394575678,
+      "test_accuracy": 0.731300723842948,
+      "train_prediction_summary": {
+        "accuracy": 0.7491767629698665,
+        "predicted_label_counts": {
+          "0": 14649,
+          "1": 1446
+        },
+        "confusion_matrix": {
+          "labels": [
+            0,
+            1
+          ],
+          "matrix": [
+            [
+              11145,
+              533
+            ],
+            [
+              3504,
+              913
+            ]
+          ],
+          "rows": "true",
+          "cols": "pred"
+        }
+      },
+      "val_prediction_summary": {
+        "accuracy": 0.7252843394575678,
+        "predicted_label_counts": {
+          "0": 2068,
+          "1": 218
+        },
+        "confusion_matrix": {
+          "labels": [
+            0,
+            1
+          ],
+          "matrix": [
+            [
+              1546,
+              106
+            ],
+            [
+              522,
+              112
+            ]
+          ],
+          "rows": "true",
+          "cols": "pred"
+        }
+      },
+      "test_prediction_summary": {
+        "accuracy": 0.731300723842948,
+        "predicted_label_counts": {
+          "0": 4145,
+          "1": 414
+        },
+        "confusion_matrix": {
+          "labels": [
+            0,
+            1
+          ],
+          "matrix": [
+            [
+              3112,
+              192
+            ],
+            [
+              1033,
+              222
+            ]
+          ],
+          "rows": "true",
+          "cols": "pred"
+        }
+      }
+    },
+    {
+      "classifier": "logistic_regression",
+      "params": {
+        "C": 0.1
+      },
+      "train_accuracy": 0.7513513513513513,
+      "val_accuracy": 0.7244094488188977,
+      "test_accuracy": 0.727791182276815,
+      "train_prediction_summary": {
+        "accuracy": 0.7513513513513513,
+        "predicted_label_counts": {
+          "0": 14414,
+          "1": 1681
+        },
+        "confusion_matrix": {
+          "labels": [
+            0,
+            1
+          ],
+          "matrix": [
+            [
+              11045,
+              633
+            ],
+            [
+              3369,
+              1048
+            ]
+          ],
+          "rows": "true",
+          "cols": "pred"
+        }
+      },
+      "val_prediction_summary": {
+        "accuracy": 0.7244094488188977,
+        "predicted_label_counts": {
+          "0": 2042,
+          "1": 244
+        },
+        "confusion_matrix": {
+          "labels": [
+            0,
+            1
+          ],
+          "matrix": [
+            [
+              1532,
+              120
+            ],
+            [
+              510,
+              124
+            ]
+          ],
+          "rows": "true",
+          "cols": "pred"
+        }
+      },
+      "test_prediction_summary": {
+        "accuracy": 0.727791182276815,
+        "predicted_label_counts": {
+          "0": 4089,
+          "1": 470
+        },
+        "confusion_matrix": {
+          "labels": [
+            0,
+            1
+          ],
+          "matrix": [
+            [
+              3076,
+              228
+            ],
+            [
+              1013,
+              242
+            ]
+          ],
+          "rows": "true",
+          "cols": "pred"
+        }
+      }
+    },
+    {
+      "classifier": "logistic_regression",
+      "params": {
+        "C": 1.0
+      },
+      "train_accuracy": 0.750667909288599,
+      "val_accuracy": 0.7239720034995626,
+      "test_accuracy": 0.726255757841632,
+      "train_prediction_summary": {
+        "accuracy": 0.750667909288599,
+        "predicted_label_counts": {
+          "0": 14371,
+          "1": 1724
+        },
+        "confusion_matrix": {
+          "labels": [
+            0,
+            1
+          ],
+          "matrix": [
+            [
+              11018,
+              660
+            ],
+            [
+              3353,
+              1064
+            ]
+          ],
+          "rows": "true",
+          "cols": "pred"
+        }
+      },
+      "val_prediction_summary": {
+        "accuracy": 0.7239720034995626,
+        "predicted_label_counts": {
+          "0": 2035,
+          "1": 251
+        },
+        "confusion_matrix": {
+          "labels": [
+            0,
+            1
+          ],
+          "matrix": [
+            [
+              1528,
+              124
+            ],
+            [
+              507,
+              127
+            ]
+          ],
+          "rows": "true",
+          "cols": "pred"
+        }
+      },
+      "test_prediction_summary": {
+        "accuracy": 0.726255757841632,
+        "predicted_label_counts": {
+          "0": 4078,
+          "1": 481
+        },
+        "confusion_matrix": {
+          "labels": [
+            0,
+            1
+          ],
+          "matrix": [
+            [
+              3067,
+              237
+            ],
+            [
+              1011,
+              244
+            ]
+          ],
+          "rows": "true",
+          "cols": "pred"
+        }
+      }
+    },
+    {
+      "classifier": "logistic_regression",
+      "params": {
+        "C": 10.0
+      },
+      "train_accuracy": 0.7505436470953712,
+      "val_accuracy": 0.7226596675415573,
+      "test_accuracy": 0.7260364114937486,
+      "train_prediction_summary": {
+        "accuracy": 0.7505436470953712,
+        "predicted_label_counts": {
+          "0": 14371,
+          "1": 1724
+        },
+        "confusion_matrix": {
+          "labels": [
+            0,
+            1
+          ],
+          "matrix": [
+            [
+              11017,
+              661
+            ],
+            [
+              3354,
+              1063
+            ]
+          ],
+          "rows": "true",
+          "cols": "pred"
+        }
+      },
+      "val_prediction_summary": {
+        "accuracy": 0.7226596675415573,
+        "predicted_label_counts": {
+          "0": 2034,
+          "1": 252
+        },
+        "confusion_matrix": {
+          "labels": [
+            0,
+            1
+          ],
+          "matrix": [
+            [
+              1526,
+              126
+            ],
+            [
+              508,
+              126
+            ]
+          ],
+          "rows": "true",
+          "cols": "pred"
+        }
+      },
+      "test_prediction_summary": {
+        "accuracy": 0.7260364114937486,
+        "predicted_label_counts": {
+          "0": 4077,
+          "1": 482
+        },
+        "confusion_matrix": {
+          "labels": [
+            0,
+            1
+          ],
+          "matrix": [
+            [
+              3066,
+              238
+            ],
+            [
+              1011,
+              244
+            ]
+          ],
+          "rows": "true",
+          "cols": "pred"
+        }
+      }
+    },
+    {
+      "classifier": "logistic_regression",
+      "params": {
+        "C": 100.0
+      },
+      "train_accuracy": 0.7507300403852128,
+      "val_accuracy": 0.7235345581802275,
+      "test_accuracy": 0.7260364114937486,
+      "train_prediction_summary": {
+        "accuracy": 0.7507300403852128,
+        "predicted_label_counts": {
+          "0": 14370,
+          "1": 1725
+        },
+        "confusion_matrix": {
+          "labels": [
+            0,
+            1
+          ],
+          "matrix": [
+            [
+              11018,
+              660
+            ],
+            [
+              3352,
+              1065
+            ]
+          ],
+          "rows": "true",
+          "cols": "pred"
+        }
+      },
+      "val_prediction_summary": {
+        "accuracy": 0.7235345581802275,
+        "predicted_label_counts": {
+          "0": 2034,
+          "1": 252
+        },
+        "confusion_matrix": {
+          "labels": [
+            0,
+            1
+          ],
+          "matrix": [
+            [
+              1527,
+              125
+            ],
+            [
+              507,
+              127
+            ]
+          ],
+          "rows": "true",
+          "cols": "pred"
+        }
+      },
+      "test_prediction_summary": {
+        "accuracy": 0.7260364114937486,
+        "predicted_label_counts": {
+          "0": 4077,
+          "1": 482
+        },
+        "confusion_matrix": {
+          "labels": [
+            0,
+            1
+          ],
+          "matrix": [
+            [
+              3066,
+              238
+            ],
+            [
+              1011,
+              244
+            ]
+          ],
+          "rows": "true",
+          "cols": "pred"
+        }
+      }
+    }
+  ]
+}

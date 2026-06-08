@@ -1,0 +1,33 @@
+\begin{table}[h!]
+\centering
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{ll rrr}
+\toprule
+Dataset & Language Model & \multicolumn{3}{c}{Natural Disjoint-split Accuracy} \\
+& & Reputation & Location & Engagement \\
+\midrule
+
+\multirow{3}{*}{\logoso StackOverflow} & BERT & 63.6 & 49.5 & 62.9 \\
+ & Llama3.1-8B & 64.2 & 59.5 & 68.2 \\
+ & Mistral-7B & 65.6 & 59.3 & 65.6 \\
+\midrule
+
+\multirow{3}{*}{\logoms Mathematics} & BERT & 62.5 & 51.1 & 75.0 \\
+ & Llama3.1-8B & 50.0 & 61.7 & 87.5 \\
+ & Mistral-7B & 62.5 & 61.6 & 75.0 \\
+\midrule
+
+\multirow{3}{*}{\logosu SuperUser} & BERT & 57.4 & 43.9 & 50.0 \\
+ & Llama3.1-8B & 63.0 & 57.6 & 100.0 \\
+ & Mistral-7B & 55.6 & 57.3 & 100.0 \\
+\midrule
+
+\multirow{3}{*}{\logoes English} & BERT &  & 56.6 & 52.5 \\
+ & Llama3.1-8B &  & 63.3 & 54.7 \\
+ & Mistral-7B &  & 60.1 & 58.5 \\
+\bottomrule
+\end{tabular}
+}
+\caption{\textbf{Predictability of protected attributes from profile-text representations.} We report test accuracy for predicting the protected attribute $\rv{Z}$ from the representation $\rv{H}$ of users' self-descriptions under the natural disjoint split. Higher accuracy indicates that the embedding retains more information about the attribute, implying stronger attribute leakage from textual representations.}
+\label{fig:accuracy-on-self-description}
+\end{table}

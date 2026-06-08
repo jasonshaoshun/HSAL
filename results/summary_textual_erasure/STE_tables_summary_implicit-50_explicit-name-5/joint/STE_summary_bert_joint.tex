@@ -1,0 +1,65 @@
+\begin{table*}[th!]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{ll rr  rr  rr  rr}
+\toprule
+Bias Type & Method & \multicolumn{2}{c}{\textcolor{black}{\logoso \textbf{Stackoverflow}}} & \multicolumn{2}{c}{\textcolor{black}{\logoms \textbf{Mathematics}}} & \multicolumn{2}{c}{\textcolor{black}{\logosu \textbf{SuperUser}}} & \multicolumn{2}{c}{\textcolor{black}{\logoes \textbf{English}}} \\
+& & Main & TPR-Gap & Main & TPR-Gap & Main & TPR-Gap & Main & TPR-Gap \\
+\midrule
+\multirow{4}{*}{Name} & Baseline &  &  &  &  &  &  &  &  \\
+\addlinespace[4pt]
+& SAL (random) &  &  &  &  &  &  &  &  \\
+\addlinespace[4pt]
+& SAL (explicit) &  &  &  &  &  &  &  &  \\
+\addlinespace[4pt]
+& SAL (implicit) &  &  &  &  &  &  &  &  \\
+\addlinespace[4pt]
+\midrule
+
+\multirow{4}{*}{Gender} & Baseline &  &  &  &  &  &  &  &  \\
+\addlinespace[4pt]
+& SAL (random) &  &  &  &  &  &  &  &  \\
+\addlinespace[4pt]
+& SAL (explicit) &  &  &  &  &  &  &  &  \\
+\addlinespace[4pt]
+& SAL (implicit) &  &  &  &  &  &  &  &  \\
+\addlinespace[4pt]
+\midrule
+
+\multirow{4}{*}{Country} & Baseline &  &  &  &  &  &  &  &  \\
+\addlinespace[4pt]
+& SAL (random) &  &  &  &  &  &  &  &  \\
+\addlinespace[4pt]
+& SAL (explicit) &  &  &  &  &  &  &  &  \\
+\addlinespace[4pt]
+& SAL (implicit) &  &  &  &  &  &  &  &  \\
+\addlinespace[4pt]
+\midrule
+
+\multirow{4}{*}{Reputation} & Baseline &  &  &  &  &  &  &  &  \\
+\addlinespace[4pt]
+& SAL (random) &  &  &  &  &  &  &  &  \\
+\addlinespace[4pt]
+& SAL (explicit) &  &  &  &  &  &  &  &  \\
+\addlinespace[4pt]
+& SAL (implicit) &  &  &  &  &  &  &  &  \\
+\addlinespace[4pt]
+\midrule
+
+\multirow{4}{*}{Engagement} & Baseline &  &  &  &  &  &  &  &  \\
+\addlinespace[4pt]
+& SAL (random) &  &  &  &  &  &  &  &  \\
+\addlinespace[4pt]
+& SAL (explicit) &  &  &  &  &  &  &  &  \\
+\addlinespace[4pt]
+& SAL (implicit) &  &  &  &  &  &  &  &  \\
+\addlinespace[4pt]
+\bottomrule
+\end{tabular}
+}
+\caption{\textbf{BERT leaderboard on implicit and explicit debiasing across five types of demographic information and four different domains.}
+Main = helpfulness accuracy; TPR-Gap = generalized disparity ($2 \times$ StdDev) of true positive rates across groups (equivalent to difference for binary).
+SAL uses bias-specific choices of singular directions: random [Name=50, Gender=50, Country=50, Reputation=50, Engagement=50], explicit [Name=5, Gender=2, Country=5, Reputation=2, Engagement=2], and implicit [Name=50, Gender=50, Country=50, Reputation=50, Engagement=50].
+\textbf{User-overlap (joint) split}: the same users may appear in both the training and test sets.}
+\label{tab:ste-summary-bert-joint}
+\end{table*}

@@ -1,0 +1,193 @@
+{
+  "provenance": {
+    "stackoverflow": {
+      "reputation": {
+        "model_name_or_path": "bert-base-uncased",
+        "npz_path": "data/STE/stackoverflow/reputation/bert-base-uncased/natural_disjoint.npz",
+        "keys": {
+          "train": "y_train_reputation",
+          "validation": "y_val_reputation",
+          "test": "y_test_reputation"
+        }
+      },
+      "gender": {
+        "model_name_or_path": "bert-base-uncased",
+        "npz_path": "data/STE/stackoverflow/gender/bert-base-uncased/natural_disjoint.npz",
+        "keys": {
+          "train": "y_train_gender",
+          "validation": "y_val_gender",
+          "test": "y_test_gender"
+        }
+      },
+      "location": {
+        "model_name_or_path": "bert-base-uncased",
+        "npz_path": "data/STE/stackoverflow/location/bert-base-uncased/natural_disjoint.npz",
+        "keys": {
+          "train": "y_train_location",
+          "validation": "y_val_location",
+          "test": "y_test_location"
+        }
+      },
+      "engagement": {
+        "model_name_or_path": "bert-base-uncased",
+        "npz_path": "data/STE/stackoverflow/engagement/bert-base-uncased/natural_disjoint.npz",
+        "keys": {
+          "train": "y_train_engagement",
+          "validation": "y_val_engagement",
+          "test": "y_test_engagement"
+        }
+      },
+      "name": {
+        "model_name_or_path": "bert-base-uncased",
+        "npz_path": "data/STE/stackoverflow/name/bert-base-uncased/natural_disjoint.npz",
+        "keys": {
+          "train": "y_train_name_cluster",
+          "validation": "y_val_name_cluster",
+          "test": "y_test_name_cluster"
+        }
+      }
+    },
+    "mathematics": {
+      "reputation": {
+        "model_name_or_path": "bert-base-uncased",
+        "npz_path": "data/STE/mathematics/reputation/bert-base-uncased/natural_disjoint.npz",
+        "keys": {
+          "train": "y_train_reputation",
+          "validation": "y_val_reputation",
+          "test": "y_test_reputation"
+        }
+      },
+      "gender": {
+        "model_name_or_path": "bert-base-uncased",
+        "npz_path": "data/STE/mathematics/gender/bert-base-uncased/natural_disjoint.npz",
+        "keys": {
+          "train": "y_train_gender",
+          "validation": "y_val_gender",
+          "test": "y_test_gender"
+        }
+      },
+      "location": {
+        "model_name_or_path": "bert-base-uncased",
+        "npz_path": "data/STE/mathematics/location/bert-base-uncased/natural_disjoint.npz",
+        "keys": {
+          "train": "y_train_location",
+          "validation": "y_val_location",
+          "test": "y_test_location"
+        }
+      },
+      "engagement": {
+        "model_name_or_path": "bert-base-uncased",
+        "npz_path": "data/STE/mathematics/engagement/bert-base-uncased/natural_disjoint.npz",
+        "keys": {
+          "train": "y_train_engagement",
+          "validation": "y_val_engagement",
+          "test": "y_test_engagement"
+        }
+      },
+      "name": {
+        "model_name_or_path": "bert-base-uncased",
+        "npz_path": "data/STE/mathematics/name/bert-base-uncased/natural_disjoint.npz",
+        "keys": {
+          "train": "y_train_name_cluster",
+          "validation": "y_val_name_cluster",
+          "test": "y_test_name_cluster"
+        }
+      }
+    },
+    "superuser": {
+      "reputation": {
+        "model_name_or_path": "bert-base-uncased",
+        "npz_path": "data/STE/superuser/reputation/bert-base-uncased/natural_disjoint.npz",
+        "keys": {
+          "train": "y_train_reputation",
+          "validation": "y_val_reputation",
+          "test": "y_test_reputation"
+        }
+      },
+      "gender": {
+        "model_name_or_path": "bert-base-uncased",
+        "npz_path": "data/STE/superuser/gender/bert-base-uncased/natural_disjoint.npz",
+        "keys": {
+          "train": "y_train_gender",
+          "validation": "y_val_gender",
+          "test": "y_test_gender"
+        }
+      },
+      "location": {
+        "model_name_or_path": "bert-base-uncased",
+        "npz_path": "data/STE/superuser/location/bert-base-uncased/natural_disjoint.npz",
+        "keys": {
+          "train": "y_train_location",
+          "validation": "y_val_location",
+          "test": "y_test_location"
+        }
+      },
+      "engagement": {
+        "model_name_or_path": "bert-base-uncased",
+        "npz_path": "data/STE/superuser/engagement/bert-base-uncased/natural_disjoint.npz",
+        "keys": {
+          "train": "y_train_engagement",
+          "validation": "y_val_engagement",
+          "test": "y_test_engagement"
+        }
+      },
+      "name": {
+        "model_name_or_path": "bert-base-uncased",
+        "npz_path": "data/STE/superuser/name/bert-base-uncased/natural_disjoint.npz",
+        "keys": {
+          "train": "y_train_name_cluster",
+          "validation": "y_val_name_cluster",
+          "test": "y_test_name_cluster"
+        }
+      }
+    },
+    "english": {
+      "reputation": {
+        "model_name_or_path": "bert-base-uncased",
+        "npz_path": "data/STE/english/reputation/bert-base-uncased/natural_disjoint.npz",
+        "keys": {
+          "train": "y_train_reputation",
+          "validation": "y_val_reputation",
+          "test": "y_test_reputation"
+        }
+      },
+      "gender": {
+        "model_name_or_path": "bert-base-uncased",
+        "npz_path": "data/STE/english/gender/bert-base-uncased/natural_disjoint.npz",
+        "keys": {
+          "train": "y_train_gender",
+          "validation": "y_val_gender",
+          "test": "y_test_gender"
+        }
+      },
+      "location": {
+        "model_name_or_path": "bert-base-uncased",
+        "npz_path": "data/STE/english/location/bert-base-uncased/natural_disjoint.npz",
+        "keys": {
+          "train": "y_train_location",
+          "validation": "y_val_location",
+          "test": "y_test_location"
+        }
+      },
+      "engagement": {
+        "model_name_or_path": "bert-base-uncased",
+        "npz_path": "data/STE/english/engagement/bert-base-uncased/natural_disjoint.npz",
+        "keys": {
+          "train": "y_train_engagement",
+          "validation": "y_val_engagement",
+          "test": "y_test_engagement"
+        }
+      },
+      "name": {
+        "model_name_or_path": "bert-base-uncased",
+        "npz_path": "data/STE/english/name/bert-base-uncased/natural_disjoint.npz",
+        "keys": {
+          "train": "y_train_name_cluster",
+          "validation": "y_val_name_cluster",
+          "test": "y_test_name_cluster"
+        }
+      }
+    }
+  },
+  "consistency_warnings": []
+}

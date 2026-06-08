@@ -1,0 +1,33 @@
+\begin{table}[h!]
+\centering
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{ll rrrr}
+\toprule
+Dataset & Language Model & \multicolumn{4}{c}{Test Accuracy (\%)} \\
+& & Reputation & Gender & Location & Engagement \\
+\midrule
+
+\multirow{3}{*}{\logoso StackOverflow} & BERT &  &  &  &  \\
+ & Llama3.1-8B &  &  &  &  \\
+ & Mistral-7B &  &  &  &  \\
+\midrule
+
+\multirow{3}{*}{\logoms Mathematics} & BERT &  &  &  &  \\
+ & Llama3.1-8B &  &  &  &  \\
+ & Mistral-7B &  &  &  &  \\
+\midrule
+
+\multirow{3}{*}{\logosu SuperUser} & BERT &  &  &  &  \\
+ & Llama3.1-8B &  &  &  &  \\
+ & Mistral-7B &  &  &  &  \\
+\midrule
+
+\multirow{3}{*}{\logoes English} & BERT &  &  &  &  \\
+ & Llama3.1-8B &  &  &  &  \\
+ & Mistral-7B &  &  &  &  \\
+\bottomrule
+\end{tabular}
+}
+\caption{\textbf{Predictability of protected attributes from profile-text representations.} We report test accuracy for predicting the protected attribute $\rv{Z}$ from the representation $\rv{H}$ of users' self-descriptions, using the existing train/val/test split provided in the data. Higher accuracy indicates that the embedding retains more information about the attribute, implying stronger attribute leakage from textual representations.}
+\label{tab:accuracy-on-self-description}
+\end{table}

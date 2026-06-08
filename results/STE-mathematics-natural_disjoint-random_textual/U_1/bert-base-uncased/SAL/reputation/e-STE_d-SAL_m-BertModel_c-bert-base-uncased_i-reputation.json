@@ -1,0 +1,86 @@
+[
+    {
+        "experiment_id": "e-STE_d-SAL_m-BertModel_c-bert-base-uncased_i-reputation",
+        "experiment": "STE",
+        "debiasing": "SAL",
+        "model": "BertModel",
+        "main_task_accuracy_before": 0.6353681760473974,
+        "main_task_accuracy_after": 0.6352094794752433,
+        "tpr_gap_before": 0.07292691970193314,
+        "tpr_gap_after": 0.07499433376523974,
+        "weighted_tpr_gap_before": 0.06711927170427605,
+        "weighted_tpr_gap_after": 0.06850926726353775,
+        "bias_prediction_accuracy_before": 0.6244710114261532,
+        "bias_prediction_accuracy_after": 0.6243652137113839,
+        "bias_type": "reputation",
+        "num_eigenvectors_removed": 1,
+        "tpr_stats_before": {
+            "per_class_tprs": {
+                "0": {
+                    "0": {
+                        "support": 6646,
+                        "tpr": 0.9011435449894674
+                    },
+                    "1": {
+                        "support": 5094,
+                        "tpr": 0.8568904593639576
+                    }
+                },
+                "1": {
+                    "0": {
+                        "support": 2806,
+                        "tpr": 0.17462580185317178
+                    },
+                    "1": {
+                        "support": 4358,
+                        "tpr": 0.26778338687471315
+                    }
+                }
+            },
+            "per_class_gap": {
+                "0": 0.04425308562550978,
+                "1": 0.09315758502154137
+            },
+            "per_class_support": {
+                "0": 11740,
+                "1": 7164
+            },
+            "tpr_gap_rms": 0.07292691970193314,
+            "weighted_tpr_gap_rms": 0.06711927170427605
+        },
+        "tpr_stats_after": {
+            "per_class_tprs": {
+                "0": {
+                    "0": {
+                        "support": 6646,
+                        "tpr": 0.9008426120975023
+                    },
+                    "1": {
+                        "support": 5094,
+                        "tpr": 0.8586572438162544
+                    }
+                },
+                "1": {
+                    "0": {
+                        "support": 2806,
+                        "tpr": 0.1707056307911618
+                    },
+                    "1": {
+                        "support": 4358,
+                        "tpr": 0.2680128499311611
+                    }
+                }
+            },
+            "per_class_gap": {
+                "0": 0.04218536828124786,
+                "1": 0.09730721913999929
+            },
+            "per_class_support": {
+                "0": 11740,
+                "1": 7164
+            },
+            "tpr_gap_rms": 0.07499433376523974,
+            "weighted_tpr_gap_rms": 0.06850926726353775
+        }
+    }
+]

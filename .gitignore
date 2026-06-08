@@ -1,0 +1,87 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+machine.file.*
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+
+# Logs and databases #
+######################
+*.log
+*.sqlite
+*.stats
+*.out
+*.npz
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+
+# Results #
+######################
+*.pdf
+*.xlsx
+*.texy
+
+*.mat
+*.egg-info*
+*Makefile*
+*.pyc
+*.ipynb_checkpoints
+
+
+
+*.npz
+*.npy
+
+
+*.pkl
+*.ipynb_checkpoints
+*.pickle
+
+
+# Log files
+logs/
+*.log
+
+# Model files and weights
+model/
+hf_model/
+*.pkl
+*.h5
+*.pth
+*.ckpt
+
+# Keep source code directories
+
+
+/logs/
+/model/
+core
+.codex
+isambard.sh
+isambard_cpu.sh

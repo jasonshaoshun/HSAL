@@ -1,0 +1,37 @@
+\begin{table*}[th!]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{l rr  rr  rr  rr}
+\toprule
+Language Model & \multicolumn{2}{c}{Baseline} & \multicolumn{2}{c}{SAL (random)} & \multicolumn{2}{c}{SAL (explicit)} & \multicolumn{2}{c}{SAL (implicit)} \\
+& Main & TPR-Gap & Main & TPR-Gap & Main & TPR-Gap & Main & TPR-Gap \\
+\midrule
+\multicolumn{9}{l}{\textcolor{black}{\logoso \textbf{Stackoverflow}}} \\
+\addlinespace[2pt]
+BERT & 67.5 & 6.2 & \dab{0.4} 67.1 & \da{1.2} 5.0 & \dab{0.8} 66.7 & \da{5.8} 0.4 & \dab{1.7} 65.8 & \da{6.2} 0.0 \\
+Llama3.1-8B & 69.2 & 8.4 & \dab{0.3} 68.9 & \da{0.3} 8.1 & \dab{1.3} 67.9 & \da{7.9} 0.5 & \dab{2.2} 67.0 & \da{7.7} 0.7 \\
+Mistral-7B & 69.1 & 8.5 & 69.0 & \da{0.6} 7.9 & \dab{1.3} 67.8 & \da{8.0} 0.5 & \dab{2.2} 66.9 & \da{7.8} 0.8 \\
+\midrule
+\multicolumn{9}{l}{\textcolor{black}{\logoms \textbf{Mathematics}}} \\
+\addlinespace[2pt]
+BERT & 63.0 & 5.8 & \dab{0.2} 62.8 & \da{1.0} 4.8 & \dab{0.5} 62.5 & \da{4.5} 1.2 & \dab{1.8} 61.2 & \da{5.2} 0.6 \\
+Llama3.1-8B & 63.9 & 10.1 & 63.8 & \da{0.1} 10.0 & \dab{1.3} 62.5 & \da{7.5} 2.6 & \dab{2.8} 61.0 & \da{8.0} 2.1 \\
+Mistral-7B & 64.0 & 9.5 & \dab{0.2} 63.8 & \da{0.4} 9.1 & \dab{1.4} 62.7 & \da{7.0} 2.5 & \dab{2.8} 61.2 & \da{6.9} 2.6 \\
+\midrule
+\multicolumn{9}{l}{\textcolor{black}{\logosu \textbf{SuperUser}}} \\
+\addlinespace[2pt]
+BERT & 69.7 & 5.9 & \uag{0.1} 69.8 & 5.8 & \uag{0.1} 69.8 & \da{3.7} 2.2 & 69.7 & \da{3.4} 2.5 \\
+Llama3.1-8B & 65.4 & 8.9 & \dab{0.1} 65.3 & \da{0.4} 8.5 & \dab{0.7} 64.8 & \da{5.3} 3.6 & \dab{0.9} 64.6 & \da{5.2} 3.7 \\
+Mistral-7B & 66.6 & 10.5 & \dab{0.1} 66.5 & \da{1.1} 9.5 & \dab{0.6} 65.9 & \da{7.1} 3.4 & \dab{1.3} 65.2 & \da{6.0} 4.5 \\
+\midrule
+\multicolumn{9}{l}{\textcolor{black}{\logoes \textbf{English}}} \\
+\addlinespace[2pt]
+BERT & 67.5 & 13.4 & \dab{0.4} 67.1 & \da{2.7} 10.7 & \dab{0.4} 67.1 & \da{7.0} 6.5 & \dab{1.1} 66.4 & \da{6.1} 7.4 \\
+Llama3.1-8B & 60.8 & 6.7 & \dab{0.4} 60.4 & \ua{0.9} 7.6 & \dab{0.9} 59.9 & \da{5.6} 1.2 & \dab{1.7} 59.1 & \da{1.7} 5.0 \\
+Mistral-7B & 62.4 & 8.6 & \dab{0.6} 61.8 & \da{0.6} 8.0 & \dab{2.7} 59.7 & \da{5.4} 3.3 & \dab{2.8} 59.6 & \da{1.4} 7.2 \\
+\bottomrule
+\end{tabular}
+}
+\caption{\textbf{Engagement Natural Disjoint Split} debiasing on StackOverflow, Mathematics, SuperUser and English. Main = helpfulness accuracy; TPR-Gap = generalized disparity ($2 \times$ StdDev) of true positive rates across groups, equivalent to the difference in true positive rates in the binary case. SAL uses $K_{\text{random}}=25$, $K_{\text{explicit}}=2$, and $K_{\text{implicit}}=50$. \textbf{Natural user-disjoint split}: users in the training and test sets do not overlap.}
+\label{tab:engagement-natural_disjoint-selected-k}
+\end{table*}

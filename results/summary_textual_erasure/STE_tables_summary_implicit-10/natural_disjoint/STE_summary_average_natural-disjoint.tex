@@ -1,0 +1,65 @@
+\begin{table*}[th!]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{ll rr  rr  rr  rr}
+\toprule
+Bias Type & Method & \multicolumn{2}{c}{\textcolor{black}{\logoso \textbf{Stackoverflow}}} & \multicolumn{2}{c}{\textcolor{black}{\logoms \textbf{Mathematics}}} & \multicolumn{2}{c}{\textcolor{black}{\logosu \textbf{SuperUser}}} & \multicolumn{2}{c}{\textcolor{black}{\logoes \textbf{English}}} \\
+& & Main & TPR-Gap & Main & TPR-Gap & Main & TPR-Gap & Main & TPR-Gap \\
+\midrule
+\multirow{4}{*}{DisplayName} & Baseline & 69.2 & 4.9 & 64.0 & 4.8 & 71.1 & 4.1 & 63.5 & 9.9 \\
+\addlinespace[4pt]
+& SAL (random) & \dab{0.1} 69.1 & \da{0.2} 4.7 & 64.0 & 4.8 & \dab{0.1} 71.0 & \da{0.3} 3.9 & \dab{0.5} 63.0 & \da{0.4} 9.5 \\
+\addlinespace[4pt]
+& SAL & \dab{0.8} 68.4 & \da{2.9} 2.0 & \dab{1.1} 62.8 & \da{2.0} 2.8 & \dab{0.3} 70.9 & \ua{0.3} 4.4 & \dab{0.8} 62.7 & \da{0.8} 9.1 \\
+\addlinespace[4pt]
+& H-SAL & \dab{1.4} 67.8 & \da{3.7} 1.2 & \dab{1.8} 62.1 & \da{2.9} 1.8 & \dab{0.6} 70.5 & \da{0.5} 3.6 & \dab{0.8} 62.7 & \da{3.4} 6.5 \\
+\addlinespace[4pt]
+\midrule
+
+\multirow{4}{*}{Gender} & Baseline & 56.7 & 0.3 & 54.7 & 2.8 & 58.8 & 11.6 & 54.3 & 9.9 \\
+\addlinespace[4pt]
+& SAL (random) & \dab{0.3} 56.4 & \ua{0.8} 1.1 & \uag{0.3} 55.0 & 2.9 & \dab{1.5} 57.3 & \ua{0.1} 11.6 & \dab{0.6} 53.7 & \ua{1.7} 11.7 \\
+\addlinespace[4pt]
+& SAL & \dab{0.5} 56.1 & \ua{0.5} 0.8 & \uag{0.4} 55.1 & \da{0.1} 2.8 & \uag{0.4} 59.1 & 11.6 & \uag{0.1} 54.4 & \da{0.1} 9.8 \\
+\addlinespace[4pt]
+& H-SAL & \dab{1.9} 54.8 & \ua{1.6} 1.9 & \dab{1.0} 53.8 & \da{0.2} 2.7 & \uag{0.7} 59.5 & \da{0.9} 10.7 & \dab{0.3} 54.0 & \da{0.9} 9.0 \\
+\addlinespace[4pt]
+\midrule
+
+\multirow{4}{*}{Country} & Baseline & 67.4 & 11.5 & 61.0 & 9.7 & 63.4 & 7.0 & 59.3 & 10.1 \\
+\addlinespace[4pt]
+& SAL (random) & 67.3 & \ua{0.1} 11.6 & 61.1 & \da{0.1} 9.7 & \dab{0.1} 63.3 & \ua{0.2} 7.1 & \dab{0.2} 59.1 & \da{1.0} 9.1 \\
+\addlinespace[4pt]
+& SAL & \dab{0.6} 66.8 & \da{8.1} 3.4 & \dab{0.1} 60.9 & \da{2.7} 7.1 & \dab{0.3} 63.1 & \da{3.9} 3.0 & \uag{0.1} 59.5 & \da{0.3} 9.8 \\
+\addlinespace[4pt]
+& H-SAL & \dab{1.9} 65.5 & \da{8.2} 3.3 & \dab{2.7} 58.3 & \da{2.7} 7.0 & \dab{0.9} 62.5 & \da{2.8} 4.2 & 59.3 & \da{1.9} 8.1 \\
+\addlinespace[4pt]
+\midrule
+
+\multirow{4}{*}{Reputation} & Baseline & 69.2 & 8.6 & 64.0 & 11.8 & 71.1 & 8.8 & 63.5 & 9.8 \\
+\addlinespace[4pt]
+& SAL (random) & \dab{0.1} 69.1 & \da{0.1} 8.6 & 64.0 & \da{0.3} 11.5 & \dab{0.1} 71.0 & \da{0.2} 8.6 & \dab{0.5} 63.0 & \da{0.8} 9.0 \\
+\addlinespace[4pt]
+& SAL & \dab{0.8} 68.4 & \da{8.4} 0.2 & \dab{1.2} 62.7 & \da{10.0} 1.8 & \dab{0.8} 70.3 & \da{4.9} 3.9 & \dab{1.3} 62.2 & \da{4.9} 4.9 \\
+\addlinespace[4pt]
+& H-SAL & \dab{1.4} 67.8 & \da{7.2} 1.5 & \dab{1.8} 62.1 & \da{8.9} 2.9 & \dab{0.6} 70.5 & \da{3.2} 5.6 & \dab{0.8} 62.7 & \da{3.7} 6.1 \\
+\addlinespace[4pt]
+\midrule
+
+\multirow{4}{*}{Engagement} & Baseline & 68.6 & 7.7 & 63.6 & 8.5 & 67.2 & 8.4 & 63.6 & 9.6 \\
+\addlinespace[4pt]
+& SAL (random) & \dab{0.1} 68.5 & \da{0.2} 7.5 & 63.6 & 8.4 & \dab{0.1} 67.1 & \da{0.4} 8.1 & \dab{0.2} 63.3 & \da{0.5} 9.1 \\
+\addlinespace[4pt]
+& SAL & \dab{1.1} 67.5 & \da{7.2} 0.5 & \dab{1.1} 62.5 & \da{6.4} 2.1 & \dab{0.4} 66.8 & \da{5.4} 3.1 & \dab{1.3} 62.2 & \da{6.0} 3.6 \\
+\addlinespace[4pt]
+& H-SAL & \dab{1.6} 67.0 & \da{6.3} 1.4 & \dab{1.9} 61.7 & \da{5.4} 3.1 & \dab{0.7} 66.5 & \da{3.9} 4.5 & \dab{1.2} 62.4 & \da{3.0} 6.6 \\
+\addlinespace[4pt]
+\bottomrule
+\end{tabular}
+}
+\caption{\textbf{Average across BERT, Llama3.1-8B, and Mistral-7B leaderboard on implicit and explicit debiasing across five types of demographic information and four different domains.}
+Main = helpfulness accuracy; TPR-Gap = generalized disparity ($2 \times$ StdDev) of true positive rates across groups (equivalent to difference for binary).
+SAL uses bias-specific choices of singular directions: random [DisplayName=10, Gender=10, Country=10, Reputation=10, Engagement=10], explicit [DisplayName=5, Gender=2, Country=5, Reputation=2, Engagement=2], and implicit [DisplayName=10, Gender=10, Country=10, Reputation=10, Engagement=10].
+\textbf{Natural user-disjoint split}: the naturally imbalanced split where users in the training and test sets are non-overlapping.}
+\label{tab:ste-summary-average-natural-disjoint}
+\end{table*}

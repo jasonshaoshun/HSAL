@@ -1,0 +1,37 @@
+\begin{table*}[th!]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{l rr  rr  rr  rr}
+\toprule
+Language Model & \multicolumn{2}{c}{Baseline} & \multicolumn{2}{c}{SAL (random)} & \multicolumn{2}{c}{SAL (explicit)} & \multicolumn{2}{c}{SAL (implicit)} \\
+& Main & TPR-Gap & Main & TPR-Gap & Main & TPR-Gap & Main & TPR-Gap \\
+\midrule
+\multicolumn{9}{l}{\textcolor{black}{\logoso \textbf{Stackoverflow}}} \\
+\addlinespace[2pt]
+BERT & -- & -- & -- & -- & -- & -- & -- & -- \\
+Llama3.1-8B & -- & -- & -- & -- & -- & -- & -- & -- \\
+Mistral-7B & -- & -- & -- & -- & -- & -- & -- & -- \\
+\midrule
+\multicolumn{9}{l}{\textcolor{black}{\logoms \textbf{Mathematics}}} \\
+\addlinespace[2pt]
+BERT & -- & -- & -- & -- & -- & -- & -- & -- \\
+Llama3.1-8B & -- & -- & -- & -- & -- & -- & -- & -- \\
+Mistral-7B & -- & -- & -- & -- & -- & -- & -- & -- \\
+\midrule
+\multicolumn{9}{l}{\textcolor{black}{\logosu \textbf{SuperUser}}} \\
+\addlinespace[2pt]
+BERT & -- & -- & -- & -- & -- & -- & -- & -- \\
+Llama3.1-8B & -- & -- & -- & -- & -- & -- & -- & -- \\
+Mistral-7B & -- & -- & -- & -- & -- & -- & -- & -- \\
+\midrule
+\multicolumn{9}{l}{\textcolor{black}{\logoes \textbf{English}}} \\
+\addlinespace[2pt]
+BERT & -- & -- & -- & -- & -- & -- & -- & -- \\
+Llama3.1-8B & -- & -- & -- & -- & -- & -- & -- & -- \\
+Mistral-7B & -- & -- & -- & -- & -- & -- & -- & -- \\
+\bottomrule
+\end{tabular}
+}
+\caption{\textbf{Reputation Joint Split} debiasing on StackOverflow, Mathematics, SuperUser and English. Main = helpfulness accuracy; TPR-Gap = generalized disparity ($2 \times$ StdDev) of true positive rates across groups, equivalent to the difference in true positive rates in the binary case. SAL uses $K_{\text{random}}=25$, $K_{\text{explicit}}=2$, and $K_{\text{implicit}}=50$. \textbf{User-overlap (joint) split}: the same users may appear in both the training and test sets.}
+\label{tab:reputation-joint-selected-k}
+\end{table*}
