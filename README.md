@@ -51,6 +51,27 @@ The scripts are written for Slurm and use [isambard.sh](isambard.sh) or [isambar
 
 ## Data Dumping
 
+### Option 1. Download the Prepared JSONL Data
+
+You can download the prepared raw JSONL files from Google Drive:
+
+```text
+https://drive.google.com/drive/folders/1XiakamZkCPx5qyqegaGsjW1QoZUxE39q?usp=sharing
+```
+
+After unzipping the downloaded file at the repository root, you should have exactly the files produced by the data-dumping step:
+
+```text
+data/STE/from_website/data/english.jsonl
+data/STE/from_website/data/mathematics.jsonl
+data/STE/from_website/data/stackoverflow.jsonl
+data/STE/from_website/data/superuser.jsonl
+```
+
+You can then continue directly to [Data Pipeline](#data-pipeline).
+
+### Option 2. Rebuild from Stack Exchange Dumps
+
 Download the public Stack Exchange `.7z` dumps, then place either archives or extracted folders under:
 
 ```text
