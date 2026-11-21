@@ -22,12 +22,12 @@ debiasing="SAL"
 for dataset in "mathematics" "stackoverflow" "english" "superuser"; do
     for split in "natural_disjoint"; do
         # for Z_attribute in "textual" "random_textual" "binary"; do
-        for Z_attribute in "binary"; do
+        for Z_attribute in "random_textual" "binary" ; do
 
-            # for bias_type in "gender" "location" "reputation" "engagement" "name"; do
-            for bias_type in "gender" ; do
+            for bias_type in "gender" "location" "reputation" "engagement" "name"; do
+            # for bias_type in "gender"; do
                 # for num_eigenvectors_to_remove in 1 2 4 5 6 10 24 25 45 50; do
-                for num_eigenvectors_to_remove in 1 2; do
+                for num_eigenvectors_to_remove in 50; do
 
 
 
@@ -41,11 +41,11 @@ for dataset in "mathematics" "stackoverflow" "english" "superuser"; do
                             out_dir="results/${experiment}-${dataset}-${split}-${Z_attribute}/U_${num_eigenvectors_to_remove}/${model_name_or_path}/${debiasing}/${bias_type}"
                             pattern="${out_dir}"/*"${bias_type}".json
 
-                            # # if any matching file exists, skip
-                            # if compgen -G "$pattern" > /dev/null; then
-                            #     echo "[SKIP] found existing: $pattern"
-                            #     continue
-                            # else
+                            # if any matching file exists, skip
+                            if compgen -G "$pattern" > /dev/null; then
+                                echo "[SKIP] found existing: $pattern"
+                                continue
+                            else
 
                             if [[ "$split" == "joint" || "$split" == "disjoint" ]] && [[ "$bias_type" == "name" ]]; then
                                 continue

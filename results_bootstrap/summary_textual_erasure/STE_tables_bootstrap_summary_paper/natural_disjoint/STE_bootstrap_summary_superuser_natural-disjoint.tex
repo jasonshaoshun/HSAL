@@ -1,0 +1,68 @@
+\begin{table*}[th!]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{ll c c c c c c}
+\toprule
+\multicolumn{8}{c}{\textcolor{black}{\logosu \textbf{SuperUser}}} \\
+\midrule
+Bias Type & Method & Main & SD & 95\% CI & TPR-Gap & SD & 95\% CI \\
+\midrule
+\multirow{4}{*}{DisplayName} & Baseline & 0.711 & 0.006 & [0.700, 0.723] & 0.041 & 0.014 & [0.027, 0.079] \\
+\addlinespace[4pt]
+& SAL (random) & 0.711 & 0.006 & [0.699, 0.723] & \ua{0.001} 0.043 & 0.014 & [0.030, 0.081] \\
+\addlinespace[4pt]
+& SAL & \dab{0.003} 0.709 & 0.006 & [0.696, 0.721] & \ua{0.003} 0.044 & 0.014 & [0.030, 0.085] \\
+\addlinespace[4pt]
+& H-SAL & \dab{0.010} 0.701 & 0.006 & [0.688, 0.713] & \da{0.012} 0.029 & 0.012 & [0.024, 0.069] \\
+\addlinespace[4pt]
+\midrule
+
+\multirow{4}{*}{Gender} & Baseline & 0.588 & 0.024 & [0.543, 0.635] & 0.116 & 0.045 & [0.047, 0.223] \\
+\addlinespace[4pt]
+& SAL (random) & \dab{0.016} 0.572 & 0.025 & [0.528, 0.622] & \da{0.008} 0.107 & 0.046 & [0.039, 0.221] \\
+\addlinespace[4pt]
+& SAL & \uag{0.004} 0.591 & 0.024 & [0.549, 0.640] & 0.116 & 0.045 & [0.055, 0.223] \\
+\addlinespace[4pt]
+& H-SAL & \dab{0.007} 0.581 & 0.024 & [0.534, 0.629] & \da{0.012} 0.104 & 0.046 & [0.042, 0.215] \\
+\addlinespace[4pt]
+\midrule
+
+\multirow{4}{*}{Country} & Baseline & 0.634 & 0.006 & [0.622, 0.646] & 0.070 & 0.017 & [0.048, 0.112] \\
+\addlinespace[4pt]
+& SAL (random) & \dab{0.002} 0.632 & 0.006 & [0.620, 0.643] & \da{0.001} 0.069 & 0.016 & [0.049, 0.108] \\
+\addlinespace[4pt]
+& SAL & \dab{0.003} 0.631 & 0.006 & [0.620, 0.643] & \da{0.039} 0.030 & 0.015 & [0.023, 0.080] \\
+\addlinespace[4pt]
+& H-SAL & \dab{0.009} 0.625 & 0.006 & [0.613, 0.636] & \da{0.035} 0.035 & 0.013 & [0.026, 0.077] \\
+\addlinespace[4pt]
+\midrule
+
+\multirow{4}{*}{Reputation} & Baseline & 0.711 & 0.006 & [0.700, 0.723] & 0.088 & 0.016 & [0.058, 0.119] \\
+\addlinespace[4pt]
+& SAL (random) & 0.711 & 0.006 & [0.699, 0.723] & \ua{0.001} 0.089 & 0.016 & [0.061, 0.120] \\
+\addlinespace[4pt]
+& SAL & \dab{0.008} 0.703 & 0.006 & [0.691, 0.715] & \da{0.049} 0.039 & 0.015 & [0.014, 0.068] \\
+\addlinespace[4pt]
+& H-SAL & \dab{0.010} 0.701 & 0.006 & [0.688, 0.713] & \da{0.055} 0.032 & 0.014 & [0.010, 0.063] \\
+\addlinespace[4pt]
+\midrule
+
+\multirow{4}{*}{Engagement} & Baseline & 0.672 & 0.007 & [0.660, 0.686] & 0.084 & 0.014 & [0.056, 0.112] \\
+\addlinespace[4pt]
+& SAL (random) & \dab{0.001} 0.671 & 0.007 & [0.659, 0.683] & \da{0.007} 0.078 & 0.013 & [0.052, 0.104] \\
+\addlinespace[4pt]
+& SAL & \dab{0.004} 0.668 & 0.007 & [0.656, 0.681] & \da{0.054} 0.031 & 0.013 & [0.009, 0.058] \\
+\addlinespace[4pt]
+& H-SAL & \dab{0.007} 0.665 & 0.007 & [0.652, 0.676] & \da{0.049} 0.036 & 0.013 & [0.015, 0.065] \\
+\addlinespace[4pt]
+\bottomrule
+\end{tabular}
+}
+\caption{\textbf{Average bootstrap summary for Super User across BERT, Llama3.1-8B, and Mistral-7B.}
+Main = helpfulness accuracy; TPR-Gap = generalized disparity ($2 \times$ StdDev) of true positive rates across groups.
+Main and TPR-Gap are original full-test-set results; SD and 95\% CI are from the post-level bootstrap distribution.
+Comparison commands indicate changes relative to the baseline row for the same bias type.
+SAL uses bias-specific choices of singular directions: random [DisplayName=50, Gender=50, Country=50, Reputation=50, Engagement=50], explicit [DisplayName=5, Gender=2, Country=5, Reputation=2, Engagement=2], and implicit [DisplayName=50, Gender=50, Country=50, Reputation=50, Engagement=50].
+\textbf{Natural user-disjoint split}: the naturally imbalanced split where users in the training and test sets are non-overlapping.}
+\label{tab:ste-bootstrap-summary-paper-superuser-natural-disjoint}
+\end{table*}

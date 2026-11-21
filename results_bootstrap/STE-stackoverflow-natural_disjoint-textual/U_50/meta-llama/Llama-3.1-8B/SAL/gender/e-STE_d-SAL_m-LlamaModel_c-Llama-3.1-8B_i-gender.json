@@ -1,0 +1,124 @@
+[
+    {
+        "experiment_id": "e-STE_d-SAL_m-LlamaModel_c-Llama-3.1-8B_i-gender",
+        "experiment": "STE",
+        "debiasing": "SAL",
+        "model": "LlamaModel",
+        "main_task_accuracy_before": 0.5655737704918032,
+        "main_task_accuracy_after": 0.547423887587822,
+        "tpr_gap_before": 0.0,
+        "tpr_gap_after": 0.0344588734650167,
+        "weighted_tpr_gap_before": 0.0,
+        "weighted_tpr_gap_after": 0.0344588734650167,
+        "bias_prediction_accuracy_before": 0.502927400468384,
+        "bias_prediction_accuracy_after": 0.4765807962529274,
+        "bias_type": "gender",
+        "num_eigenvectors_removed": 50,
+        "tpr_stats_before": {
+            "per_class_tprs": {
+                "0": {
+                    "0": {
+                        "support": 427,
+                        "tpr": 0.585480093676815
+                    },
+                    "1": {
+                        "support": 427,
+                        "tpr": 0.585480093676815
+                    }
+                },
+                "1": {
+                    "0": {
+                        "support": 427,
+                        "tpr": 0.5456674473067916
+                    },
+                    "1": {
+                        "support": 427,
+                        "tpr": 0.5456674473067916
+                    }
+                }
+            },
+            "per_class_gap": {
+                "0": 0.0,
+                "1": 0.0
+            },
+            "per_class_support": {
+                "0": 854,
+                "1": 854
+            },
+            "tpr_gap_rms": 0.0,
+            "weighted_tpr_gap_rms": 0.0
+        },
+        "tpr_stats_after": {
+            "per_class_tprs": {
+                "0": {
+                    "0": {
+                        "support": 427,
+                        "tpr": 0.5433255269320844
+                    },
+                    "1": {
+                        "support": 427,
+                        "tpr": 0.5714285714285714
+                    }
+                },
+                "1": {
+                    "0": {
+                        "support": 427,
+                        "tpr": 0.5573770491803278
+                    },
+                    "1": {
+                        "support": 427,
+                        "tpr": 0.5175644028103045
+                    }
+                }
+            },
+            "per_class_gap": {
+                "0": 0.02810304449648704,
+                "1": 0.03981264637002335
+            },
+            "per_class_support": {
+                "0": 854,
+                "1": 854
+            },
+            "tpr_gap_rms": 0.0344588734650167,
+            "weighted_tpr_gap_rms": 0.0344588734650167
+        },
+        "bootstrap": {
+            "num_samples": 200,
+            "seed": 0,
+            "max_attempts": 100000,
+            "attempts": 200,
+            "before": {
+                "main_task_accuracy": {
+                    "original": 0.5655737704918032,
+                    "mean": 0.565403981264637,
+                    "sd": 0.011853555669080534,
+                    "ci_lower": 0.5444086651053864,
+                    "ci_upper": 0.5901785714285714
+                },
+                "tpr_gap": {
+                    "original": 0.0,
+                    "mean": 0.029845678112156902,
+                    "sd": 0.01605988216043402,
+                    "ci_lower": 0.005830674116411516,
+                    "ci_upper": 0.06757242821496293
+                }
+            },
+            "after": {
+                "main_task_accuracy": {
+                    "original": 0.547423887587822,
+                    "mean": 0.5478044496487119,
+                    "sd": 0.012673314756108217,
+                    "ci_lower": 0.5228044496487119,
+                    "ci_upper": 0.5743706088992975
+                },
+                "tpr_gap": {
+                    "original": 0.0344588734650167,
+                    "mean": 0.04678027274038744,
+                    "sd": 0.021006902220084174,
+                    "ci_lower": 0.011606846897992957,
+                    "ci_upper": 0.08666190648128808
+                }
+            }
+        }
+    }
+]

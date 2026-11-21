@@ -1,0 +1,68 @@
+\begin{table*}[th!]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{ll c c c c c c}
+\toprule
+\multicolumn{8}{c}{\textbf{Mathematics}} \\
+\midrule
+Bias Type & Method & Main & SD & 95\% CI & TPR-Gap & SD & 95\% CI \\
+\midrule
+\multirow{4}{*}{DisplayName} & Baseline & 0.640 & 0.003 & [0.632, 0.646] & 0.048 & 0.008 & [0.037, 0.067] \\
+\addlinespace[4pt]
+& SAL (random) & 0.638 & 0.004 & [0.631, 0.645] & 0.044 & 0.007 & [0.035, 0.063] \\
+\addlinespace[4pt]
+& SAL & 0.628 & 0.004 & [0.621, 0.634] & 0.028 & 0.007 & [0.022, 0.047] \\
+\addlinespace[4pt]
+& H-SAL & 0.621 & 0.004 & [0.613, 0.627] & 0.016 & 0.005 & [0.014, 0.033] \\
+\addlinespace[4pt]
+\midrule
+
+\multirow{4}{*}{Gender} & Baseline & 0.547 & 0.011 & [0.529, 0.569] & 0.028 & 0.017 & [0.009, 0.074] \\
+\addlinespace[4pt]
+& SAL (random) & 0.550 & 0.010 & [0.532, 0.572] & 0.028 & 0.017 & [0.008, 0.072] \\
+\addlinespace[4pt]
+& SAL & 0.551 & 0.010 & [0.533, 0.573] & 0.028 & 0.017 & [0.007, 0.074] \\
+\addlinespace[4pt]
+& H-SAL & 0.533 & 0.010 & [0.514, 0.556] & 0.014 & 0.016 & [0.005, 0.064] \\
+\addlinespace[4pt]
+\midrule
+
+\multirow{4}{*}{Country} & Baseline & 0.610 & 0.003 & [0.605, 0.616] & 0.097 & 0.007 & [0.086, 0.114] \\
+\addlinespace[4pt]
+& SAL (random) & 0.609 & 0.003 & [0.604, 0.615] & 0.093 & 0.007 & [0.081, 0.109] \\
+\addlinespace[4pt]
+& SAL & 0.609 & 0.003 & [0.603, 0.615] & 0.071 & 0.007 & [0.060, 0.088] \\
+\addlinespace[4pt]
+& H-SAL & 0.571 & 0.003 & [0.565, 0.577] & 0.042 & 0.007 & [0.034, 0.060] \\
+\addlinespace[4pt]
+\midrule
+
+\multirow{4}{*}{Reputation} & Baseline & 0.640 & 0.003 & [0.632, 0.646] & 0.118 & 0.007 & [0.104, 0.132] \\
+\addlinespace[4pt]
+& SAL (random) & 0.638 & 0.004 & [0.631, 0.645] & 0.111 & 0.007 & [0.097, 0.125] \\
+\addlinespace[4pt]
+& SAL & 0.627 & 0.004 & [0.620, 0.634] & 0.018 & 0.006 & [0.009, 0.033] \\
+\addlinespace[4pt]
+& H-SAL & 0.621 & 0.004 & [0.613, 0.627] & 0.017 & 0.006 & [0.008, 0.030] \\
+\addlinespace[4pt]
+\midrule
+
+\multirow{4}{*}{Engagement} & Baseline & 0.636 & 0.003 & [0.629, 0.643] & 0.085 & 0.007 & [0.072, 0.100] \\
+\addlinespace[4pt]
+& SAL (random) & 0.634 & 0.003 & [0.628, 0.641] & 0.076 & 0.007 & [0.063, 0.090] \\
+\addlinespace[4pt]
+& SAL & 0.625 & 0.003 & [0.619, 0.632] & 0.021 & 0.007 & [0.010, 0.036] \\
+\addlinespace[4pt]
+& H-SAL & 0.612 & 0.004 & [0.605, 0.619] & 0.018 & 0.006 & [0.009, 0.032] \\
+\addlinespace[4pt]
+\bottomrule
+\end{tabular}
+}
+\caption{\textbf{Average bootstrap summary for Mathematics across BERT, Llama3.1-8B, and Mistral-7B.}
+Main = helpfulness accuracy; TPR-Gap = generalized disparity ($2 \times$ StdDev) of true positive rates across groups.
+Main and TPR-Gap are original full-test-set results; SD and 95\% CI are from the post-level bootstrap distribution.
+All entries are plain numeric values without comparison commands.
+SAL uses bias-specific choices of singular directions: random [DisplayName=50, Gender=50, Country=50, Reputation=50, Engagement=50], explicit [DisplayName=5, Gender=2, Country=5, Reputation=2, Engagement=2], and implicit [DisplayName=50, Gender=50, Country=50, Reputation=50, Engagement=50].
+\textbf{Natural user-disjoint split}: the naturally imbalanced split where users in the training and test sets are non-overlapping.}
+\label{tab:ste-bootstrap-summary-plain-mathematics-natural-disjoint}
+\end{table*}

@@ -1,0 +1,124 @@
+[
+    {
+        "experiment_id": "e-STE_d-SAL_m-LlamaModel_c-Llama-3.1-8B_i-reputation",
+        "experiment": "STE",
+        "debiasing": "SAL",
+        "model": "LlamaModel",
+        "main_task_accuracy_before": 0.6966244303100115,
+        "main_task_accuracy_after": 0.6926428607201883,
+        "tpr_gap_before": 0.09889217841070652,
+        "tpr_gap_after": 0.09094432412588996,
+        "weighted_tpr_gap_before": 0.08988794230863471,
+        "weighted_tpr_gap_after": 0.08265228287386234,
+        "bias_prediction_accuracy_before": 0.6538288175489558,
+        "bias_prediction_accuracy_after": 0.648670306004908,
+        "bias_type": "reputation",
+        "num_eigenvectors_removed": 50,
+        "tpr_stats_before": {
+            "per_class_tprs": {
+                "0": {
+                    "0": {
+                        "support": 14529,
+                        "tpr": 0.9034345102897653
+                    },
+                    "1": {
+                        "support": 12020,
+                        "tpr": 0.835440931780366
+                    }
+                },
+                "1": {
+                    "0": {
+                        "support": 5438,
+                        "tpr": 0.27491724898859876
+                    },
+                    "1": {
+                        "support": 7947,
+                        "tpr": 0.39713099282748204
+                    }
+                }
+            },
+            "per_class_gap": {
+                "0": 0.06799357850939924,
+                "1": 0.12221374383888328
+            },
+            "per_class_support": {
+                "0": 26549,
+                "1": 13385
+            },
+            "tpr_gap_rms": 0.09889217841070652,
+            "weighted_tpr_gap_rms": 0.08988794230863471
+        },
+        "tpr_stats_after": {
+            "per_class_tprs": {
+                "0": {
+                    "0": {
+                        "support": 14529,
+                        "tpr": 0.9023332645054718
+                    },
+                    "1": {
+                        "support": 12020,
+                        "tpr": 0.8398502495840267
+                    }
+                },
+                "1": {
+                    "0": {
+                        "support": 5438,
+                        "tpr": 0.26609047443913203
+                    },
+                    "1": {
+                        "support": 7947,
+                        "tpr": 0.378507612935699
+                    }
+                }
+            },
+            "per_class_gap": {
+                "0": 0.062483014921445146,
+                "1": 0.11241713849656698
+            },
+            "per_class_support": {
+                "0": 26549,
+                "1": 13385
+            },
+            "tpr_gap_rms": 0.09094432412588996,
+            "weighted_tpr_gap_rms": 0.08265228287386234
+        },
+        "bootstrap": {
+            "num_samples": 200,
+            "seed": 0,
+            "max_attempts": 100000,
+            "attempts": 200,
+            "before": {
+                "main_task_accuracy": {
+                    "original": 0.6966244303100115,
+                    "mean": 0.6969250513347024,
+                    "sd": 0.0024113042828943117,
+                    "ci_lower": 0.6918377823408624,
+                    "ci_upper": 0.7013885410928031
+                },
+                "tpr_gap": {
+                    "original": 0.09889217841070652,
+                    "mean": 0.09915409521201862,
+                    "sd": 0.005032296920958837,
+                    "ci_lower": 0.08874407521804177,
+                    "ci_upper": 0.10786554432882264
+                }
+            },
+            "after": {
+                "main_task_accuracy": {
+                    "original": 0.6926428607201883,
+                    "mean": 0.6928007462312816,
+                    "sd": 0.0024654291626699356,
+                    "ci_lower": 0.6878818801021687,
+                    "ci_upper": 0.6975553413131668
+                },
+                "tpr_gap": {
+                    "original": 0.09094432412588996,
+                    "mean": 0.09118408100624745,
+                    "sd": 0.004929623639643235,
+                    "ci_lower": 0.0799372949521311,
+                    "ci_upper": 0.0990285767210136
+                }
+            }
+        }
+    }
+]

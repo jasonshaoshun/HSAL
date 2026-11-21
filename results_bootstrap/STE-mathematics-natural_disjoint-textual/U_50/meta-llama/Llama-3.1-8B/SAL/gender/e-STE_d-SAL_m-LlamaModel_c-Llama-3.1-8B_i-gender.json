@@ -1,0 +1,124 @@
+[
+    {
+        "experiment_id": "e-STE_d-SAL_m-LlamaModel_c-Llama-3.1-8B_i-gender",
+        "experiment": "STE",
+        "debiasing": "SAL",
+        "model": "LlamaModel",
+        "main_task_accuracy_before": 0.5416666666666666,
+        "main_task_accuracy_after": 0.525438596491228,
+        "tpr_gap_before": 0.021947361409117214,
+        "tpr_gap_after": 0.016174639398759436,
+        "weighted_tpr_gap_before": 0.021947361409117214,
+        "weighted_tpr_gap_after": 0.016174639398759436,
+        "bias_prediction_accuracy_before": 0.4850877192982456,
+        "bias_prediction_accuracy_after": 0.48903508771929827,
+        "bias_type": "gender",
+        "num_eigenvectors_removed": 50,
+        "tpr_stats_before": {
+            "per_class_tprs": {
+                "0": {
+                    "0": {
+                        "support": 570,
+                        "tpr": 0.5491228070175439
+                    },
+                    "1": {
+                        "support": 570,
+                        "tpr": 0.5263157894736842
+                    }
+                },
+                "1": {
+                    "0": {
+                        "support": 570,
+                        "tpr": 0.5561403508771929
+                    },
+                    "1": {
+                        "support": 570,
+                        "tpr": 0.5350877192982456
+                    }
+                }
+            },
+            "per_class_gap": {
+                "0": 0.02280701754385972,
+                "1": 0.021052631578947323
+            },
+            "per_class_support": {
+                "0": 1140,
+                "1": 1140
+            },
+            "tpr_gap_rms": 0.021947361409117214,
+            "weighted_tpr_gap_rms": 0.021947361409117214
+        },
+        "tpr_stats_after": {
+            "per_class_tprs": {
+                "0": {
+                    "0": {
+                        "support": 570,
+                        "tpr": 0.5350877192982456
+                    },
+                    "1": {
+                        "support": 570,
+                        "tpr": 0.5157894736842106
+                    }
+                },
+                "1": {
+                    "0": {
+                        "support": 570,
+                        "tpr": 0.531578947368421
+                    },
+                    "1": {
+                        "support": 570,
+                        "tpr": 0.519298245614035
+                    }
+                }
+            },
+            "per_class_gap": {
+                "0": 0.019298245614035037,
+                "1": 0.012280701754386003
+            },
+            "per_class_support": {
+                "0": 1140,
+                "1": 1140
+            },
+            "tpr_gap_rms": 0.016174639398759436,
+            "weighted_tpr_gap_rms": 0.016174639398759436
+        },
+        "bootstrap": {
+            "num_samples": 200,
+            "seed": 0,
+            "max_attempts": 100000,
+            "attempts": 200,
+            "before": {
+                "main_task_accuracy": {
+                    "original": 0.5416666666666666,
+                    "mean": 0.5435789473684209,
+                    "sd": 0.011220984137754731,
+                    "ci_lower": 0.5236622807017544,
+                    "ci_upper": 0.56625
+                },
+                "tpr_gap": {
+                    "original": 0.021947361409117214,
+                    "mean": 0.03287291556740314,
+                    "sd": 0.015068453222132957,
+                    "ci_lower": 0.006542791033540802,
+                    "ci_upper": 0.06884323777596096
+                }
+            },
+            "after": {
+                "main_task_accuracy": {
+                    "original": 0.525438596491228,
+                    "mean": 0.5274473684210527,
+                    "sd": 0.009840118788948828,
+                    "ci_lower": 0.5083223684210526,
+                    "ci_upper": 0.5491228070175439
+                },
+                "tpr_gap": {
+                    "original": 0.016174639398759436,
+                    "mean": 0.030044467829917605,
+                    "sd": 0.014668179654238786,
+                    "ci_lower": 0.006357025631372677,
+                    "ci_upper": 0.06040630783549123
+                }
+            }
+        }
+    }
+]

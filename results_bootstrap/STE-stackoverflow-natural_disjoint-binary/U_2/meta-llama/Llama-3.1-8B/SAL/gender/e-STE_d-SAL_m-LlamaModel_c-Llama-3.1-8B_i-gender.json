@@ -1,0 +1,124 @@
+[
+    {
+        "experiment_id": "e-STE_d-SAL_m-LlamaModel_c-Llama-3.1-8B_i-gender",
+        "experiment": "STE",
+        "debiasing": "SAL",
+        "model": "LlamaModel",
+        "main_task_accuracy_before": 0.5655737704918032,
+        "main_task_accuracy_after": 0.5614754098360656,
+        "tpr_gap_before": 0.0,
+        "tpr_gap_after": 0.004967963333863337,
+        "weighted_tpr_gap_before": 0.0,
+        "weighted_tpr_gap_after": 0.004967963333863337,
+        "bias_prediction_accuracy_before": 0.502927400468384,
+        "bias_prediction_accuracy_after": 0.5,
+        "bias_type": "gender",
+        "num_eigenvectors_removed": 2,
+        "tpr_stats_before": {
+            "per_class_tprs": {
+                "0": {
+                    "0": {
+                        "support": 427,
+                        "tpr": 0.585480093676815
+                    },
+                    "1": {
+                        "support": 427,
+                        "tpr": 0.585480093676815
+                    }
+                },
+                "1": {
+                    "0": {
+                        "support": 427,
+                        "tpr": 0.5456674473067916
+                    },
+                    "1": {
+                        "support": 427,
+                        "tpr": 0.5456674473067916
+                    }
+                }
+            },
+            "per_class_gap": {
+                "0": 0.0,
+                "1": 0.0
+            },
+            "per_class_support": {
+                "0": 854,
+                "1": 854
+            },
+            "tpr_gap_rms": 0.0,
+            "weighted_tpr_gap_rms": 0.0
+        },
+        "tpr_stats_after": {
+            "per_class_tprs": {
+                "0": {
+                    "0": {
+                        "support": 427,
+                        "tpr": 0.5831381733021077
+                    },
+                    "1": {
+                        "support": 427,
+                        "tpr": 0.5901639344262295
+                    }
+                },
+                "1": {
+                    "0": {
+                        "support": 427,
+                        "tpr": 0.5362997658079626
+                    },
+                    "1": {
+                        "support": 427,
+                        "tpr": 0.5362997658079626
+                    }
+                }
+            },
+            "per_class_gap": {
+                "0": 0.007025761124121788,
+                "1": 0.0
+            },
+            "per_class_support": {
+                "0": 854,
+                "1": 854
+            },
+            "tpr_gap_rms": 0.004967963333863337,
+            "weighted_tpr_gap_rms": 0.004967963333863337
+        },
+        "bootstrap": {
+            "num_samples": 200,
+            "seed": 0,
+            "max_attempts": 100000,
+            "attempts": 200,
+            "before": {
+                "main_task_accuracy": {
+                    "original": 0.5655737704918032,
+                    "mean": 0.565403981264637,
+                    "sd": 0.011853555669080534,
+                    "ci_lower": 0.5444086651053864,
+                    "ci_upper": 0.5901785714285714
+                },
+                "tpr_gap": {
+                    "original": 0.0,
+                    "mean": 0.029845678112156902,
+                    "sd": 0.01605988216043402,
+                    "ci_lower": 0.005830674116411516,
+                    "ci_upper": 0.06757242821496293
+                }
+            },
+            "after": {
+                "main_task_accuracy": {
+                    "original": 0.5614754098360656,
+                    "mean": 0.5613114754098361,
+                    "sd": 0.012126457886466867,
+                    "ci_lower": 0.5397833723653396,
+                    "ci_upper": 0.5849092505854802
+                },
+                "tpr_gap": {
+                    "original": 0.004967963333863337,
+                    "mean": 0.02927798205822567,
+                    "sd": 0.016265200897612405,
+                    "ci_lower": 0.0049269393087273666,
+                    "ci_upper": 0.06708663863005554
+                }
+            }
+        }
+    }
+]

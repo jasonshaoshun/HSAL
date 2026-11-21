@@ -81,12 +81,9 @@ hf_model/
 
 /logs/
 /model/
+/data/
 core
 .codex
 isambard.sh
 isambard_cpu.sh
-
-
-
-
 
