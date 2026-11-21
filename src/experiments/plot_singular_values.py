@@ -81,6 +81,8 @@ def parse_args():
                     help="Optional filename prefix. Defaults to the bias type, e.g. reputation.png.")
     ap.add_argument("--logy", action="store_true",
                     help="Use log scale on y-axis.")
+    ap.add_argument("--tick_fontsize", type=float, default=22,
+                    help="Font size of the tick numbers on both axes (axis labels stay at 24).")
     args = ap.parse_args()
 
     if args.values_txt is None and args.npz_path is None:
@@ -257,7 +259,7 @@ def compute_textual_z_singular_values(npz_path: Path, x_key: str, y_key: str) ->
     return s, x.shape, y.shape
 
 
-def plot_values(values: np.ndarray, out_dir: str, output_prefix: str, logy: bool) -> None:
+def plot_values(values: np.ndarray, out_dir: str, output_prefix: str, logy: bool, tick_fontsize: float = 22) -> None:
     import matplotlib.pyplot as plt
     import numpy as np
 
@@ -272,6 +274,9 @@ def plot_values(values: np.ndarray, out_dir: str, output_prefix: str, logy: bool
 
     if logy:
         plt.yscale("log")
+
+    # Set after yscale so the log-axis tick labels pick up the size too.
+    plt.tick_params(axis="both", which="both", labelsize=tick_fontsize)
 
     plt.tight_layout()
     plt.savefig(os.path.join(out_dir, f"{output_prefix}.pdf"), bbox_inches="tight")
@@ -329,7 +334,7 @@ def main():
             print(f"Computed {len(s)} singular values")
 
         np.savetxt(os.path.join(args.out_dir, f"{output_prefix}.txt"), s)
-        plot_values(s, args.out_dir, output_prefix, args.logy)
+        plot_values(s, args.out_dir, output_prefix, args.logy, args.tick_fontsize)
         print(f"Saved {output_prefix}.pdf/.png/.txt to {args.out_dir}")
 
 
